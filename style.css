@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #020617, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* 🔥 BIGGER CHAT CONTAINER (DESKTOP) */
+.chat-container {
+  width: min(90vw, 520px);   /* Desktop par motu */
+  height: min(85vh, 700px);  /* Zoom vagar height vadhe */
+  background: #020617;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(90deg, #2563eb, #22d3ee);
+  padding: 18px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header span {
+  display: block;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* CHAT AREA */
+#chat {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* MESSAGES */
+.msg {
+  margin: 12px 0;
+  padding: 12px 16px;
+  border-radius: 14px;
+  max-width: 75%;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.user {
+  background: #2563eb;
+  color: white;
+  margin-left: auto;
+}
+
+.bot {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+/* INPUT AREA */
+.input-area {
+  display: flex;
+  padding: 14px;
+  border-top: 1px solid #1e293b;
+}
+
+input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+button {
+  margin-left: 12px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #22d3ee;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 📱 MOBILE – PERFECT FULL SCREEN */
+@media (max-width: 600px) {
+  .chat-container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .header {
+    font-size: 18px;
+  }
+
+  .msg {
+    font-size: 16px;
+  }
+}
