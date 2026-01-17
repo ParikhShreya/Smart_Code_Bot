@@ -29,7 +29,7 @@ function send() {
     if (trainedWords[text]) {
       addBot(`✅ Your code for ${text} is: ${trainedWords[text]}`);
     } else {
-      addBot("❌ Sorry, this word is not trained");
+      addBot("Wrong Input");
     }
   }, 600);
 }
@@ -49,3 +49,4 @@ function addUser(msg) {
   chat.appendChild(div);
   chat.scrollTop = chat.scrollHeight;
 }
+
