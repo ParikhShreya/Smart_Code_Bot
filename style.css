@@ -12,10 +12,10 @@ body {
   margin: 0;
 }
 
-/* 🔥 BIGGER CHAT CONTAINER (DESKTOP) */
+/* ================= DESKTOP / LAPTOP ================= */
 .chat-container {
-  width: min(90vw, 520px);   /* Desktop par motu */
-  height: min(85vh, 700px);  /* Zoom vagar height vadhe */
+  width: 520px;
+  height: 700px;
   background: #020617;
   border-radius: 18px;
   box-shadow: 0 25px 50px rgba(0,0,0,0.8);
@@ -68,7 +68,7 @@ body {
   color: #e5e7eb;
 }
 
-/* INPUT AREA */
+/* INPUT */
 .input-area {
   display: flex;
   padding: 14px;
@@ -95,19 +95,32 @@ button {
   font-weight: bold;
 }
 
-/* 📱 MOBILE – PERFECT FULL SCREEN */
-@media (max-width: 600px) {
+/* ================= MOBILE – COMFORT MODE ================= */
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
   .chat-container {
-    width: 100vw;
-    height: 100vh;
-    border-radius: 0;
+    width: 100%;
+    max-width: 420px;   /* mobile par too wide na bane */
+    height: 82vh;       /* comfortable height */
+    margin: auto;
+    border-radius: 16px;
   }
 
   .header {
     font-size: 18px;
+    padding: 16px;
   }
 
   .msg {
+    font-size: 16px;
+    max-width: 85%;
+  }
+
+  input {
     font-size: 16px;
   }
 }
