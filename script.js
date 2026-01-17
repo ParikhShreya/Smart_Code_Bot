@@ -16,7 +16,7 @@ input.addEventListener("keypress", function (e) {
 
 // Initial bot messages
 setTimeout(() => addBot("Hello 👋 Welcome to Smart Code Bot"), 500);
-setTimeout(() => addBot("Please enter one word: apple, banana or orange"), 1200);
+
 
 function send() {
   const text = input.value.toLowerCase().trim();
