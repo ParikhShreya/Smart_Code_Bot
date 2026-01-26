@@ -7,6 +7,9 @@ const trainedWords = {
 const chat = document.getElementById("chat");
 const input = document.getElementById("input");
 
+// ✅ PLACEHOLDER ADDED
+input.placeholder = "Type apple, banana, or orange";
+
 // ENTER KEY SUPPORT
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
@@ -16,7 +19,6 @@ input.addEventListener("keypress", function (e) {
 
 // Initial bot messages
 setTimeout(() => addBot("Hello 👋 Welcome to Smart Code Bot"), 500);
-
 
 function send() {
   const text = input.value.toLowerCase().trim();
@@ -29,7 +31,7 @@ function send() {
     if (trainedWords[text]) {
       addBot(`✅ Your code for ${text} is: ${trainedWords[text]}`);
     } else {
-      addBot("Wrong Input");
+      addBot("❌ Wrong Input. Try apple, banana, or orange");
     }
   }, 600);
 }
@@ -49,4 +51,3 @@ function addUser(msg) {
   chat.appendChild(div);
   chat.scrollTop = chat.scrollHeight;
 }
-
