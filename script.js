@@ -23,7 +23,7 @@ input.addEventListener("keypress", function (e) {
 setTimeout(() => addBot("Hello 👋 Welcome to Smart Code Bot"), 500);
 
 function send() {
-  const text = input.value.toLowerCase().trim();
+  const text = input.value.toUpperCase().trim();
   if (!text) return;
 
   addUser(text);
@@ -53,4 +53,5 @@ function addUser(msg) {
   chat.appendChild(div);
   chat.scrollTop = chat.scrollHeight;
 }
+
 
