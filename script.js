@@ -1,14 +1,16 @@
 const trainedWords = {
-  apple: "123",
-  banana: "456",
-  orange: "789"
+  HARDNESS : "8947",
+  RESONATE: "5264",
+  VELOCITY : "7465",
+  GRADIENT : "6513",
+  ETHERNET : "4265"
 };
 
 const chat = document.getElementById("chat");
 const input = document.getElementById("input");
 
 // ✅ PLACEHOLDER ADDED
-input.placeholder = "Type apple, banana, or orange";
+input.placeholder = "Type HARDNESS / RESONATE / VELOCITY / GRADIENT / ETHERNET";
 
 // ENTER KEY SUPPORT
 input.addEventListener("keypress", function (e) {
@@ -31,7 +33,7 @@ function send() {
     if (trainedWords[text]) {
       addBot(`✅ Your code for ${text} is: ${trainedWords[text]}`);
     } else {
-      addBot("❌ Wrong Input. Try apple, banana, or orange");
+      addBot("❌ Wrong Input. Try HARDNESS / RESONATE / VELOCITY / GRADIENT / ETHERNET ");
     }
   }, 600);
 }
@@ -51,3 +53,4 @@ function addUser(msg) {
   chat.appendChild(div);
   chat.scrollTop = chat.scrollHeight;
 }
+
